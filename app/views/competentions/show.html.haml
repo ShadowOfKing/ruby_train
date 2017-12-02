@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @competention.title
+%p
+  %b Description:
+  = @competention.description
+%p
+  %b Isdone:
+  = @competention.isdone
+
+= link_to 'Edit', edit_competention_path(@competention)
+\|
+= link_to 'Back', competentions_path

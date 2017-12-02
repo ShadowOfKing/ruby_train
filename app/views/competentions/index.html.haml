@@ -1,0 +1,25 @@
+%h1 Listing competentions
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th Isdone
+      %th
+      %th
+      %th
+
+  %tbody
+    - @competentions.each do |competention|
+      %tr
+        %td= competention.title
+        %td= competention.description
+        %td= competention.isdone
+        %td= link_to 'Show', competention
+        %td= link_to 'Edit', edit_competention_path(competention)
+        %td= link_to 'Destroy', competention, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Competention', new_competention_path
