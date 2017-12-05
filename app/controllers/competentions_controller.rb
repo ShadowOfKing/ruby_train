@@ -14,6 +14,8 @@ class CompetentionsController < ApplicationController
 
   # GET /competentions/new
   def new
+    flash[:notice] = "Создаём компетенцию"
+    flash[:alert] = "Упс..."
     @competention = Competention.new
   end
 

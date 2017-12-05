@@ -1,3 +1,60 @@
 // Place all the styles related to the Competentions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin  change-colors($percent: 25%, $type: both) {
+  @if ($type == "back") {
+      background: lighten($menu-bg-color, 20%);
+  }
+  @else {
+    @if ($type == "for") {
+      color: lighten($menu-color, 20%);
+    } @else {
+      color: lighten($menu-color, 20%);
+      background: lighten($menu-bg-color, 20%);
+    }
+  }
+}
+
+$menu-height: 60px;
+$menu-color: #21f963;
+$menu-bg-color: complement($menu-color);
+
+nav {
+  &#top{
+    &-menu {
+      height: $menu-height;
+      color: $menu-color;
+      background-color: $menu-bg-color;
+
+      ul {
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        li {
+          display: inline-block;
+
+          a {
+            text-decoration: none;
+            line-height: $menu-height;
+            height: $menu-height;
+            display: inline-block;
+            padding: 0 10px;
+
+            &:hover {
+              @include change-colors(40%, "both");
+            }
+          }
+        }
+      }
+    }
+  }
+}

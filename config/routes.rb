@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'competentions#index'
+  get 'hello/world', to: 'hello#world'
+  get 'hello/hi', to: 'hello#hi'
+  get 'hello/plain', to: 'hello#plain'
   resources :competentions
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,11 +1,11 @@
-%h1 Listing competentions
+%h1 Список компетенций
 
-%table
+%table.table.table-striped.table-hover
   %thead
     %tr
-      %th Title
-      %th Description
-      %th Isdone
+      %th Название
+      %th Описание
+      %th Выполнена
       %th
       %th
       %th
@@ -16,10 +16,10 @@
         %td= competention.title
         %td= competention.description
         %td= competention.isdone
-        %td= link_to 'Show', competention
-        %td= link_to 'Edit', edit_competention_path(competention)
-        %td= link_to 'Destroy', competention, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Показать', competention
+        %td= link_to 'Назад', edit_competention_path(competention)
+        %td= link_to 'Удалить', competention, method: :delete, data: { confirm: 'Вы уверены?' }
 
 %br
 
-= link_to 'New Competention', new_competention_path
+= link_to 'Новая компетенция', new_competention_path
