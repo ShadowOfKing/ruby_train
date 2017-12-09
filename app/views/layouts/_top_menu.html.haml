@@ -1,8 +1,16 @@
 %nav#top-menu
   %ul
+    %li.dropdown
+      %a{"data-toggle" => "dropdown", class: "dropdown-toggle", href: "#"}
+        Компетенции
+        %ul.dropdown-menu
+          %li.dropdown-menu__item
+            = link_to "Личные", ""
+          %li.dropdown-menu__item
+            = link_to "Профессиональные", ""
+          %li.dropdown-menu__item
+            = link_to "Прочие", ""
     %li
-      = link_to "Пункт 1", "#"
+      = link_to "Знания", "#"
     %li
-      = link_to "Пункт 1", "#"
-    %li
-      = link_to "Пункт 1", "#"
+      = link_to "Hello", "#"
